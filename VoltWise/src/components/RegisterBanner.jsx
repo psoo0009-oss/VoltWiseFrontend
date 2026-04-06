@@ -2,7 +2,7 @@ import React from 'react'
 
 const RegisterBanner = () => {
   return (
-    <header className="flex flex-col items-center text-center gap-4 w-full max-w-2xl mx-auto">
+    <header className="flex flex-col items-center text-center pt-8 gap-4 w-full max-w-2xl mx-auto">
         {/* Subtitle / Kicker */}
         <span className="text-green-800 text-sm md:text-base font-bold uppercase tracking-[0.2em]">
             Personalization
