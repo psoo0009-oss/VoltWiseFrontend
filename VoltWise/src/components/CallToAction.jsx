@@ -7,17 +7,17 @@ const CallToAction = () => {
             <div className="space-y-4 max-w-2xl z-10">
                 <h2 
                     id="cta-heading"
-                    className="text-white text-4xl md:text-5xl font-extrabold font-['Plus_Jakarta_Sans'] leading-tight"
+                    className="text-white text-4xl md:text-5xl font-extrabold leading-tight"
                 >
                     Ready to lead the change?
                 </h2>
                 
-                <p className="text-white/90 text-lg md:text-xl font-normal font-['Plus_Jakarta_Sans'] leading-relaxed">
+                <p className="text-white/90 text-lg md:text-xl font-normal leading-relaxed">
                     Join thousands of Victorians using GreenGrid to lower their bills and their environmental impact.
                 </p>
             </div>
             <button 
-                className="px-10 py-4 bg-white hover:bg-stone-100 text-green-800 text-lg font-bold font-['Plus_Jakarta_Sans'] rounded-full transition-colors z-10"
+                className="px-10 py-4 bg-white hover:bg-stone-100 text-green-800 text-lg font-bold rounded-full transition-colors z-10"
             >
                 Create Free Account
             </button>

@@ -6,12 +6,12 @@ const FeatureCard = ({ name, description, children }) => {
             {children}
             <div className="flex flex-col justify-start py-10 items-center">
                 <div className="w-72 justify-start items-start">
-                <h3 className="justify-center text-stone-900 text-2xl font-semibold font-['Plus_Jakarta_Sans'] leading-8">
+                <h3 className="justify-center text-stone-900 text-2xl font-semibold leading-8">
                     { name }
                 </h3>
             </div>
             <div className="w-72 justify-start items-start">
-                <p className="justify-center text-neutral-700 text-base font-normal font-['Plus_Jakarta_Sans'] leading-6">
+                <p className="justify-center text-neutral-700 text-base font-normal leading-6">
                     { description }
                 </p>
             </div>

@@ -10,12 +10,12 @@ const FeatureSelection = () => {
             <div className="w-full max-w-480 flex flex-col justify-start items-start gap-16">
                 <hgroup className="self-stretch flex flex-col justify-start items-start gap-4">
                     <div className="self-stretch flex flex-col justify-start items-center">
-                        <h1 className="w-[514.16px] h-10 text-center justify-center text-stone-900 text-4xl font-extrabold font-['Plus_Jakarta_Sans'] leading-10">
+                        <h1 className="w-[514.16px] h-10 text-center justify-center text-stone-900 text-4xl font-extrabold leading-10">
                             Intelligent Energy Stewardship
                         </h1>
                     </div>
                     <div className="self-stretch flex flex-col justify-start items-center">
-                        <h2 className="w-[462.98px] h-7 text-center justify-center text-neutral-700 text-lg font-normal font-['Plus_Jakarta_Sans'] leading-7">
+                        <h2 className="w-[462.98px] h-7 text-center justify-center text-neutral-700 text-lg font-normal leading-7">
                             Powerful tools designed for a cleaner, greener Victoria.
                         </h2>
                     </div>

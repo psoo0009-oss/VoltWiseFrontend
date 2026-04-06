@@ -5,32 +5,32 @@ const WebHeader = () => {
     return (
         <header className="w-7xl left-0 top-0 absolute bg-stone-100 inline-flex flex-col justify-start items-start">
             <nav className="w-full max-w-480 px-12 py-6 inline-flex justify-between items-center">
-                <h1 className="inline-flex flex-col justify-start items-start">
-                    <div className="w-28 h-8 justify-center text-green-800 text-2xl font-bold font-['Plus_Jakarta_Sans'] leading-8">GreenGrid</div>
-                </h1>
+                <div className="inline-flex flex-col justify-start items-start">
+                    <h1 className="w-28 h-8 justify-center text-green-800 text-2xl font-bold leading-8">GreenGrid</h1>
+                </div>
                 <nav className="flex justify-start items-center gap-8">
                     <Link className="pb-1 border-b-2 border-green-800 inline-flex flex-col justify-start items-start" to="/" >
-                        <p className="w-12 h-6 justify-center text-green-800 text-base font-semibold font-['Plus_Jakarta_Sans'] leading-6">
+                        <p className="w-12 h-6 justify-center text-green-800 text-base font-semibold leading-6">
                             Home
                         </p>
                     </Link>
                     <Link className="inline-flex flex-col justify-start items-start">
-                        <p className="w-20 h-6 justify-center text-neutral-700 text-base font-medium font-['Plus_Jakarta_Sans'] leading-6">
+                        <p className="w-20 h-6 justify-center text-neutral-700 text-base font-medium leading-6">
                             Grid Status
                         </p>
                     </Link>
                     <Link className="inline-flex flex-col justify-start items-start">
-                        <p className="w-20 h-6 justify-center text-neutral-700 text-base font-medium font-['Plus_Jakarta_Sans'] leading-6">
+                        <p className="w-20 h-6 justify-center text-neutral-700 text-base font-medium leading-6">
                             My Devices
                         </p>
                     </Link>
                     <Link className="inline-flex flex-col justify-start items-start">
-                        <p className="w-12 h-6 justify-center text-neutral-700 text-base font-medium font-['Plus_Jakarta_Sans'] leading-6">
+                        <p className="w-12 h-6 justify-center text-neutral-700 text-base font-medium leading-6">
                             Offset
                         </p>
                     </Link>
                     <Link className="inline-flex flex-col justify-start items-start">
-                        <p className="w-11 h-6 justify-center text-neutral-700 text-base font-medium font-['Plus_Jakarta_Sans'] leading-6">
+                        <p className="w-11 h-6 justify-center text-neutral-700 text-base font-medium leading-6">
                             Alerts
                         </p>
                     </Link>
