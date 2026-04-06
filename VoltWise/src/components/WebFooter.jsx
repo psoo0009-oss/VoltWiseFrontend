@@ -2,7 +2,7 @@ import React from 'react'
 
 const WebFooter = () => {
     return (
-        <footer className="self-stretch py-12 bg-stone-100 inline-flex flex-col justify-start items-start">
+        <footer className="w-7xl left-0 py-12 bg-stone-100 inline-flex flex-col justify-start items-start">
             <div className="w-full max-w-480 px-12 inline-flex justify-between items-center">
                 <div className="inline-flex flex-col justify-start items-start gap-2">
                     <div className="w-24 h-7 justify-center text-neutral-700 text-lg font-bold font-['Plus_Jakarta_Sans'] leading-7">
