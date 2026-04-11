@@ -1,8 +1,55 @@
-import React from 'react'
+import { useState } from "react";
+import axios from 'axios';
+import 'dotenv/config'
 
 const SignUpForm = () => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [error, setError] = useState("")
+
+    const handleEmail = (event) => {
+        setEmail(event.target.value)
+    }
+
+    const handlePassword = (event) => {
+        setPassword(event.target.value)
+    }
+
+    const handleConfirmPassword = (event) => {
+        setConfirmPassword(event.target.value)
+    }
+
+    const handleSignUp = async (event) => {
+        event.preventDefault()
+        if (!email || !password || !confirmPassword) {
+            setError("Error: Please enter email and password")
+            return; 
+        }
+
+        if (password !== confirmPassword) {
+            setError("Error: Password mismatch")
+            return;
+        }
+
+        else {
+            setError("")
+            try {
+                await axios.post(`${process.env.}/api/auth/register`, {
+                    email: email,
+                    password: password
+                })
+            } catch (err) {
+                setError(err?.message ?? "Error during sign up process")
+            }
+        }
+    }
+
     return (
-        <section className="w-157.5 p-12 bg-white rounded-[48px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-center">
+        <section 
+            className="w-157.5 p-12 bg-white rounded-[48px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] 
+            inline-flex flex-col justify-start items-center"
+        >
             <header className="text-center mb-10">
                 <h1 className="text-stone-900 text-4xl font-extrabold font-['Plus_Jakarta_Sans'] leading-10 mb-2">
                     Join the movement
@@ -12,15 +59,20 @@ const SignUpForm = () => {
                 </p>
             </header>
 
-            <form className="w-full flex flex-col gap-6">
-    
+            <form 
+                className="w-full flex flex-col gap-6"
+                onSubmit={handleSignUp}
+            >
+                {error && <p>{error}</p>}
                 <div className="flex flex-col gap-1.5">
                     <label for="email" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Email Address</label>
                     <input 
                         type="email" 
                         id="email" 
                         placeholder="name@example.com" 
-                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
+                        placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                        onChange={handleEmail}
                     />
                 </div>
 
@@ -30,7 +82,9 @@ const SignUpForm = () => {
                         type="password" 
                         id="password" 
                         placeholder="••••••••" 
-                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
+                        placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                        onChange={handlePassword}
                     />
                 </div>
 
@@ -40,11 +94,17 @@ const SignUpForm = () => {
                         type="password" 
                         id="verify-password" 
                         placeholder="••••••••" 
-                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 
+                        placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                        onChange={handleConfirmPassword}
                     />
                 </div>
 
-                <button type="submit" className="w-full py-4 mt-2 bg-green-500 hover:bg-green-600 transition-colors rounded-full text-green-950 text-base font-bold font-['Plus_Jakarta_Sans']">
+                <button 
+                    type="submit" 
+                    className="w-full py-4 mt-2 bg-green-500 hover:bg-green-600 transition-colors rounded-full text-green-950 
+                    text-base font-bold font-['Plus_Jakarta_Sans']"
+                >
                     Create Account
                 </button>
             </form>
@@ -59,6 +119,13 @@ const SignUpForm = () => {
                 <img src="/google-icon.svg" alt="" className="w-5 h-5" />
                 <span className="text-stone-900 text-base font-medium font-['Plus_Jakarta_Sans']">Continue with Google</span>
             </button>
+
+            <footer class="mt-6 text-center">
+                <p class="text-neutral-700 text-base font-normal font-['Plus_Jakarta_Sans']">
+                    Already have an account? 
+                    <span class="text-green-800 font-bold hover:underline">Sign In</span>
+                </p>
+            </footer>
         </section>
     )
 }
