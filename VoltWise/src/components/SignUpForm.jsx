@@ -1,0 +1,66 @@
+import React from 'react'
+
+const SignUpForm = () => {
+    return (
+        <section className="w-157.5 p-12 bg-white rounded-[48px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] inline-flex flex-col justify-start items-center">
+            <header className="text-center mb-10">
+                <h1 className="text-stone-900 text-4xl font-extrabold font-['Plus_Jakarta_Sans'] leading-10 mb-2">
+                    Join the movement
+                </h1>
+                <p className="text-stone-500 text-xl font-normal font-['Plus_Jakarta_Sans'] leading-7">
+                    Start your journey toward sustainable stewardship.
+                </p>
+            </header>
+
+            <form className="w-full flex flex-col gap-6">
+    
+                <div className="flex flex-col gap-1.5">
+                    <label for="email" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="name@example.com" 
+                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                    <label for="password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="••••••••" 
+                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                    />
+                </div>
+
+                <div className="flex flex-col gap-1.5">
+                    <label for="verify-password" className="pl-1 text-neutral-700 text-sm font-normal font-['Plus_Jakarta_Sans']">Verify Password</label>
+                    <input 
+                        type="password" 
+                        id="verify-password" 
+                        placeholder="••••••••" 
+                        className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder-neutral-500 text-base font-['Plus_Jakarta_Sans'] outline-none focus:ring-2 focus:ring-green-500"
+                    />
+                </div>
+
+                <button type="submit" className="w-full py-4 mt-2 bg-green-500 hover:bg-green-600 transition-colors rounded-full text-green-950 text-base font-bold font-['Plus_Jakarta_Sans']">
+                    Create Account
+                </button>
+            </form>
+
+            <div className="w-full flex items-center my-6">
+                <hr className="flex-1 border-stone-300/30" />
+                <span className="px-4 text-neutral-500 text-xs font-normal font-['Plus_Jakarta_Sans'] uppercase tracking-wider">or</span>
+                <hr className="flex-1 border-stone-300/30" />
+            </div>
+
+            <button className="w-full py-4 bg-stone-100 rounded-full border border-stone-300/20 flex justify-center items-center gap-3 hover:bg-stone-200 transition-colors">
+                <img src="/google-icon.svg" alt="" className="w-5 h-5" />
+                <span className="text-stone-900 text-base font-medium font-['Plus_Jakarta_Sans']">Continue with Google</span>
+            </button>
+        </section>
+    )
+}
+
+export default SignUpForm
