@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router";
 
 const SignUpForm = () => {
     const [email, setEmail] = useState("")
@@ -59,7 +60,7 @@ const SignUpForm = () => {
 
     return (
         <section
-            className="w-full max-w-[630px] p-6 md:p-12 bg-white rounded-[32px] md:rounded-[48px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] 
+            className="w-full max-w-157.5 p-6 md:p-12 bg-white rounded-4xl md:rounded-[48px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] 
             flex flex-col justify-start items-center mx-auto box-border"
         >
             <header className="text-center mb-10">
@@ -168,7 +169,7 @@ const SignUpForm = () => {
         <footer class="mt-6 text-center">
         <p class="text-neutral-700 text-base font-normal ">
         Already have an account?
-        <span class="text-green-800 font-bold hover:underline">Sign In</span>
+        <Link to="/login" class="text-green-800 font-bold hover:underline">Sign In</Link>
         </p>
         </footer>
         </section>
