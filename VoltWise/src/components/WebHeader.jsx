@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import ProfileIcon from '../assets/profile.svg'
 
 const WebHeader = () => {
     return (
@@ -37,7 +38,7 @@ const WebHeader = () => {
                 </nav>
                 <div className="p-2 rounded-full inline-flex flex-col justify-center items-center">
                     <div className="inline-flex justify-center items-start">
-                        <span className="w-5 h-5 bg-neutral-700" />
+                        <img src={ProfileIcon} alt="profile" />
                     </div>
                 </div>
             </nav>
