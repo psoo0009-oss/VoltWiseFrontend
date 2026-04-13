@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import { Link } from "react-router";
+import GoogleIcon from "../assets/google-icon.svg";
 
 const SignUpForm = () => {
     const [email, setEmail] = useState("")
@@ -162,7 +163,7 @@ const SignUpForm = () => {
         </div>
 
         <button className="w-full py-4 bg-stone-100 rounded-full border border-stone-300/20 flex justify-center items-center gap-3 hover:bg-stone-200 transition-colors">
-        <span className="w-5 h-5 bg-neutral-200"></span>
+        <img src={GoogleIcon} alt='Google Sign In' />
         <span className="text-stone-900 text-base font-medium ">Continue with Google</span>
         </button>
 
