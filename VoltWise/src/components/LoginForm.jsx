@@ -4,7 +4,7 @@ import GoogleIcon from '../assets/google-icon.svg'
 
 const LoginForm = () => {
     return (
-        <main className="w-[630px] p-12 bg-white rounded-[48px] shadow-lg flex flex-col items-center font-['Plus_Jakarta_Sans']">
+        <main className="w-157.5 p-12 bg-white rounded-[48px] shadow-lg flex flex-col items-center font-['Plus_Jakarta_Sans']">
             {/* Header Section */}
             <header className="text-center mb-10">
                 <h1 className="text-stone-900 text-4xl font-extrabold leading-10">
@@ -25,7 +25,7 @@ const LoginForm = () => {
                     id="email"
                     type="email"
                     placeholder="name@example.com"
-                    className="w-full px-5 py-4 bg-stone-200 rounded-[32px] text-stone-900 placeholder:text-neutral-500 outline-none focus:ring-2 ring-green-500 transition-all"
+                    className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder:text-neutral-500 outline-none focus:ring-2 ring-green-500 transition-all"
                 />
                 </div>
 
@@ -37,7 +37,7 @@ const LoginForm = () => {
                     id="password"
                     type="password"
                     placeholder="••••••••"
-                    className="w-full px-5 py-4 bg-stone-200 rounded-[32px] text-stone-900 placeholder:text-neutral-500 outline-none focus:ring-2 ring-green-500 transition-all"
+                    className="w-full px-5 py-4 bg-stone-200 rounded-4xl text-stone-900 placeholder:text-neutral-500 outline-none focus:ring-2 ring-green-500 transition-all"
                 />
                 </div>
 
